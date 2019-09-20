@@ -103,16 +103,30 @@ int main(int argc, char** argv)
 	for (a=0 ; a<firstDay ; a++) {
 		cout << setw(4) << "|"; }
 	//////////////
-	for (b=1 ; b<8-firstDay ; b++) {
-		cout << setw(3) << b << "|"; }
+	if (month == 7) {
+		for (b=1 ; b<8-firstDay ; b++) {
+			if (b == 4) {
+				cout << setw(3) << "*4" << "|"; }
+			else {
+				cout << setw(3) << b << "|"; } } }
+	else {
+		for (b=1 ; b<8-firstDay ; b++) {
+			cout << setw(3) << b << "|"; } }
 	cout << "\n|";
 	for (c=0 ; c<7 ; c++) {
 		cout << setw(4) << "|"; }
 	cout << "\n|---------------------------|" << endl;
 	//////////////
 	cout << "|";
-	for (d=b ; d<b+7 ; d++) {
-		cout << setw(3) << d << "|"; }
+	if (month == 7) {
+		for (d=b ; d<b+7 ; d++) {
+			if (d == 4) {
+				cout << setw(3) << "*4" << "|"; }
+			else {
+				cout << setw(3) << d << "|"; } } }
+	else {
+		for (d=b ; d<b+7 ; d++) {
+			cout << setw(3) << d << "|"; } }
 	cout << "\n|";
 	for (c=0 ; c<7 ; c++) {
 		cout << setw(4) << "|"; }
@@ -127,8 +141,15 @@ int main(int argc, char** argv)
 	cout << "\n|---------------------------|" << endl;
 	//////////////
 	cout << "|";
-	for (f=e ; f<e+7 ; f++) {
-		cout << setw(3) << f << "|"; }
+	if (month == 12) {
+		for (f=e ; f<e+7 ; f++) {
+			if (f == 25) {
+				cout << setw(3) << "*25" << "|"; }
+			else {
+				cout << setw(3) << f << "|"; } } }
+	else {
+		for (f=e ; f<e+7 ; f++) {
+			cout << setw(3) << f << "|"; } }
 	cout << "\n|";
 	for (c=0 ; c<7 ; c++) {
 		cout << setw(4) << "|"; }
@@ -137,9 +158,25 @@ int main(int argc, char** argv)
 	int numDaysRem = numDays - (f-1); int j=0;
 	if (numDaysRem >= 7) {
 		cout << "|";
-		for (g=f ; g<f+numDaysRem-(numDaysRem%7) ; g++) {
-			cout << setw(3) << g << "|";
-			j += 1; }
+		if (month == 10) {
+			for (g=f ; g<f+numDaysRem-(numDaysRem%7) ; g++) {
+				//cout << g << endl;
+				if (g == 31) {
+					cout << setw(3) << "*31" << "|"; }
+				else {
+			cout << setw(3) << g << "|"; }
+				j += 1; } }
+		else if (month == 12) {
+			for (g=f ; g<f+numDaysRem-(numDaysRem%7) ; g++) {
+				if (g == 25) {
+					cout << setw(3) << "*25" << "|"; }
+				else {
+					cout << setw(3) << g << "|"; }
+				j += 1; } }
+		else {
+			for (g=f ; g<f+numDaysRem-(numDaysRem%7) ; g++) {
+				cout << setw(3) << g << "|";
+				j += 1; } }
 		for (h=0 ; h<7-j ; h++) {
 			cout << setw(4) << "|"; }
 		cout << "\n|";
@@ -157,13 +194,22 @@ int main(int argc, char** argv)
 		for (c=0 ; c<7 ; c++) {
 			cout << setw(4) << "|"; }
 		cout << "\n|---------------------------|" << endl; }
-	//////////////
+	///////////;
+	//cout << g << endl;
 	numDaysRem -= 7; int l=0;
-	if (numDaysRem >= 0) {
+	if (numDaysRem > 0) {
 		cout << "|";
-		for (k=g ; k<g+numDaysRem ; k++) {
-			cout << setw(3) << k << "|";
-			l += 1; }
+		if (month == 10) {
+			for (k=g ; k<g+numDaysRem ; k++) {
+				if (k == 31) {
+					cout << setw(3) << "*31" << "|"; }
+				else {
+					cout << setw(3) << k << "|"; }
+				l += 1; } }
+		else {
+			for (k=g ; k<g+numDaysRem ; k++) {
+				cout << setw(3) << k << "|";
+				l += 1; } }
 		for (m=0 ; m<7-l ; m++) {
 			cout << setw(4) << "|"; }
 		cout << "\n|";

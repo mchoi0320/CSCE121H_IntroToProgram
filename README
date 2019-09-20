@@ -1,1 +1,8 @@
-~README~
+~~~~README~~~~
+Created 9/13/19
+
+
+calendar.cpp:
+
+	> Takes in two arguments (numerical month and year) and prints out the calendar for the specified month and year
+	> Halloween gets properly flagged on Sundays, Mondays, and Saturdays, but not when it falls between Tuesdays and Fridays
