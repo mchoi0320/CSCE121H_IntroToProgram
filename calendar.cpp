@@ -195,7 +195,6 @@ int main(int argc, char** argv)
 			cout << setw(4) << "|"; }
 		cout << "\n|---------------------------|" << endl; }
 	///////////;
-	//cout << g << endl;
 	numDaysRem -= 7; int l=0;
 	if (numDaysRem > 0) {
 		cout << "|";
