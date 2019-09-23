@@ -1,4 +1,7 @@
-all: hello hello2 examples showbits area area2 circle stringtest1 stringtest2 show_words weather calendar gcd fact fib
+all: histogram hello hello2 examples showbits area area2 circle stringtest1 stringtest2 show_words weather calendar gcd fact fib
+
+histogram: histogram.cpp
+	g++ -o histogram histogram.cpp
 
 fib: fib.cpp
 	g++ -o fib fib.cpp

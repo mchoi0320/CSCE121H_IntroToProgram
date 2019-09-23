@@ -1,8 +1,12 @@
 ~~~~README~~~~
 Created 9/13/19
 
+(9/22/19) histogram.cpp:
+	> Takes in two command-line arguments (file name and number of desired bins for the histogram)
+	> Prints out statistics such as the number of values, mean, standard deviation, and range of values and a histogram
 
-calendar.cpp:
+(9/13/19) calendar.cpp:
 
-	> Takes in two arguments (numerical month and year) and prints out the calendar for the specified month and year
-	> Halloween gets properly flagged on Sundays, Mondays, and Saturdays, but not when it falls between Tuesdays and Fridays
+	> Takes in two command-line arguments (numerical month and year)
+	> Prints out the calendar for the specified month and year
+	> Halloween gets properly flagged on Sundays, Mondays, and Saturdays, but not when it falls between Tuesdays and Fridays		>> Needs troubleshooting
