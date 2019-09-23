@@ -9,4 +9,5 @@ Created 9/13/19
 
 	> Takes in two command-line arguments (numerical month and year)
 	> Prints out the calendar for the specified month and year
-	> Halloween gets properly flagged on Sundays, Mondays, and Saturdays, but not when it falls between Tuesdays and Fridays		>> Needs troubleshooting
+	> Halloween gets properly flagged on Sundays, Mondays, and Saturdays, but not when it falls between Tuesdays and Fridays
+		>> Needs troubleshooting
