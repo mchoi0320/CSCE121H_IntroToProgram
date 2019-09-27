@@ -2,8 +2,11 @@
 Created 9/13/19
 
 (9/22/19) histogram.cpp:
-	> Takes in two command-line arguments (file name and number of desired bins for the histogram)
+	> Takes in two command-line arguments (file name [ex: wx.dat, temps.dat] and number of desired bins for the histogram)
 	> Prints out statistics such as the number of values, mean, standard deviation, and range of values and a histogram
+	> (9/25/19) Changes:
+		>> Asks user to enter a positive value for the number of bins if the input is 0 or a negative number
+		>> Minor changes to format of histogram
 
 (9/13/19) calendar.cpp:
 

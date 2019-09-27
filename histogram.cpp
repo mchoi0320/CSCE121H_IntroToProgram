@@ -11,6 +11,9 @@ int main(int argc, char** argv)
 	ifstream input;
 	input.open(argv[1]);
 	int numBins = atoi(argv[2]);
+	while (numBins <= 0) {
+		cout << "Please re-enter a positive value for the number of bins: ";
+		cin >> numBins; }
 	
 	double val, sum=0, numVal=0;
 	vector<double> vals;
@@ -83,14 +86,15 @@ int main(int argc, char** argv)
 		cout << numInBinTotal.at(c) << " "; }
 	cout << endl;	*/
 	// Printing the histogram
-	cout << "\n---Histogram---";
+	cout << "\n-------Histogram-------";
 	int n, o;
 	for (n=0; n<bins.size(); n++) {
 		cout << endl;
-		cout << fixed << setprecision(2) << bins.at(n) << "-" << bins.at(n)+binRange << ": ";
+		cout << fixed << setprecision(2) << bins.at(n) << '-' << bins.at(n)+binRange << "|";
 		for (o=0; o<numInBinTotal.at(n); o++) {
-			cout << "*"; } }
+			cout << '*'; } }
 	cout << endl;
+	cout << setfill('-') << setw(23) << '-' << endl;
 
 	return 0;
 }
