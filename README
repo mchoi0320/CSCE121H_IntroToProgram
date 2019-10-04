@@ -1,6 +1,12 @@
 ~~~~README~~~~
 Created 9/13/19
 
+(9/23/19) vending.cpp
+	> Takes in a command-line argument (ex. vending_contents.txt)
+	> Simulates a vending machine
+	> Needs work on:
+		>> Proper change algorithm
+
 (9/22/19) histogram.cpp:
 	> Takes in two command-line arguments (file name [ex: wx.dat, temps.dat] and number of desired bins for the histogram)
 	> Prints out statistics such as the number of values, mean, standard deviation, and range of values and a histogram

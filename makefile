@@ -1,4 +1,25 @@
-all: histogram hello hello2 examples showbits area area2 circle stringtest1 stringtest2 show_words weather calendar gcd fact fib
+all: pi randomize iris pointers geometry arrays vending histogram hello hello2 examples showbits area area2 circle stringtest1 stringtest2 show_words weather calendar gcd fact fib
+
+pi: pi.cpp
+	g++ -o pi pi.cpp
+
+randomize: randomize.cpp
+	g++ -o randomize randomize.cpp
+
+iris: iris.cpp
+	g++ --std=c++11 -o iris iris.cpp
+
+pointers: pointers.cpp
+	g++ -o pointers pointers.cpp
+
+geometry: geometry.cpp
+	g++ -o geometry geometry.cpp
+
+arrays: arrays.cpp
+	g++ -o arrays arrays.cpp
+
+vending: vending.cpp
+	g++ --std=c++11 -o vending vending.cpp
 
 histogram: histogram.cpp
 	g++ -o histogram histogram.cpp
@@ -6,8 +27,14 @@ histogram: histogram.cpp
 fib: fib.cpp
 	g++ -o fib fib.cpp
 
-fact: fact.cpp
-	g++ -o fact fact.cpp
+fact: fact.o fact_utils.o
+	g++ -o fact fact.o fact_utils.o
+
+fact.o: fact.cpp fact_utils.hpp
+	g++ -c fact.cpp
+
+fact_utils: fact_utils.cpp fact_utils.hpp
+	g++ -c fact_utils.cpp
 
 gcd: gcd.cpp
 	g++ -o gcd gcd.cpp
