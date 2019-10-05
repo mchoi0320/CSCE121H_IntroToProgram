@@ -1,11 +1,16 @@
 ~~~~README~~~~
 Created 9/13/19
 
+(10/4/19) functions.cpp
+
 (9/23/19) vending.cpp
 	> Takes in a command-line argument (ex. vending_contents.txt)
 	> Simulates a vending machine
 	> Needs work on:
 		>> Proper change algorithm
+	> (10/4/19) Changes:
+		>> Fixed getChange() function (does not work on certain test cases; needs troubleshooting)
+		>> Now returns change using getChange() upon "quit" if there is an outstanding balance
 
 (9/22/19) histogram.cpp:
 	> Takes in two command-line arguments (file name [ex: wx.dat, temps.dat] and number of desired bins for the histogram)
