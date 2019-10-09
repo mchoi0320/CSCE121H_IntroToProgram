@@ -1,10 +1,18 @@
 ~~~~README~~~~
 Created 9/13/19
 
-(10/4/19) functions.cpp
+(10/07/17) NewtonRaphsonSqrt.cpp:
+	> Takes in a float as a command-line argument
+	> newton_raphson_iter() calculates the square root of the input value using Newton's method iteratively
+	> newton_raphson_rec() calculates the square root of the input value using Newton's method recursively
+		>> Recursive function produces segmentation fault for certain numbers
 
-(9/23/19) vending.cpp
-	> Takes in a command-line argument (ex. vending_contents.txt)
+(10/04/19) subsets_.cpp:
+	> subsetsI.cpp
+	> subsetsR.cpp
+
+(09/23/19) vending.cpp
+	> Takes in a command-line argument for a file (ex. vending_contents.txt)
 	> Simulates a vending machine
 	> Needs work on:
 		>> Proper change algorithm
@@ -12,14 +20,14 @@ Created 9/13/19
 		>> Fixed getChange() function (does not work on certain test cases; needs troubleshooting)
 		>> Now returns change using getChange() upon "quit" if there is an outstanding balance
 
-(9/22/19) histogram.cpp:
+(09/22/19) histogram.cpp:
 	> Takes in two command-line arguments (file name [ex: wx.dat, temps.dat] and number of desired bins for the histogram)
 	> Prints out statistics such as the number of values, mean, standard deviation, and range of values and a histogram
 	> (9/25/19) Changes:
 		>> Asks user to enter a positive value for the number of bins if the input is 0 or a negative number
 		>> Minor changes to format of histogram
 
-(9/13/19) calendar.cpp:
+(09/13/19) calendar.cpp:
 
 	> Takes in two command-line arguments (numerical month and year)
 	> Prints out the calendar for the specified month and year

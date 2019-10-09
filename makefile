@@ -1,4 +1,19 @@
-all: pi randomize iris pointers geometry arrays vending histogram hello hello2 examples showbits area area2 circle stringtest1 stringtest2 show_words weather calendar gcd fact fib
+all: genomics mysplit NewtonRaphsonSqrt subsetsI subsetsR pi randomize iris pointers geometry arrays vending histogram hello hello2 examples showbits area area2 circle stringtest1 stringtest2 show_words weather calendar gcd fact fib
+
+genomics: genomics.cpp
+	g++ -o genomics genomics.cpp
+
+mysplit: mysplit.cpp
+	g++ -o mysplit mysplit.cpp
+
+NewtonRaphsonSqrt: NewtonRaphsonSqrt.cpp
+	g++ -o NewtonRaphsonSqrt NewtonRaphsonSqrt.cpp
+
+subsetsI: subsetsI.cpp
+	g++ -o subsetsI subsetsI.cpp
+
+subsetsR: subsetsR.cpp
+	g++ -o subsetsR subsetsR.cpp
 
 pi: pi.cpp
 	g++ -o pi pi.cpp
