@@ -10,10 +10,10 @@ NewtonRaphsonSqrt: NewtonRaphsonSqrt.cpp
 	g++ -o NewtonRaphsonSqrt NewtonRaphsonSqrt.cpp
 
 subsetsI: subsetsI.cpp
-	g++ -o subsetsI subsetsI.cpp
+	g++ -std=c++11 -o subsetsI subsetsI.cpp
 
 subsetsR: subsetsR.cpp
-	g++ -o subsetsR subsetsR.cpp
+	g++ -std=c++11 -o subsetsR subsetsR.cpp
 
 pi: pi.cpp
 	g++ -o pi pi.cpp

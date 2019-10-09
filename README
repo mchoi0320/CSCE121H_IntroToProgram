@@ -8,8 +8,8 @@ Created 9/13/19
 		>> Recursive function produces segmentation fault for certain numbers
 
 (10/04/19) subsets_.cpp:
-	> subsetsI.cpp
-	> subsetsR.cpp
+	> subsetsI.cpp & subsetsR.cpp
+	> Takes in a list of strings from the command line and outputs all possible combinations of the input strings (includes empty set)
 
 (09/23/19) vending.cpp
 	> Takes in a command-line argument for a file (ex. vending_contents.txt)
