@@ -1,7 +1,13 @@
 all: genomics mysplit NewtonRaphsonSqrt subsetsI subsetsR pi randomize iris pointers geometry arrays vending histogram hello hello2 examples showbits area area2 circle stringtest1 stringtest2 show_words weather calendar gcd fact fib
 
-genomics: genomics.cpp
-	g++ -o genomics genomics.cpp
+genomics: genomics.o codons.o
+	g++ -o genomics genomics.o codons.o
+
+genomics.o: genomics.cpp codons.hpp
+	g++ -std=c++11 -c genomics.cpp
+
+codons: codons.cpp codons.hpp
+	g++ -c codons.cpp
 
 mysplit: mysplit.cpp
 	g++ -o mysplit mysplit.cpp

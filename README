@@ -1,7 +1,14 @@
 ~~~~README~~~~
 Created 9/13/19
 
-(10/07/17) NewtonRaphsonSqrt.cpp:
+(10/07/19) genomics.cpp:
+	> Takes in three command-line arguments (.fasta file, .prot_table file, and gene name/ID)
+	> Prints out:
+		>> Genome statistics from the .fasta file
+		>> Gene statistics from the .prot_table file
+		>> Gene sequence and its amino acid translation from the user-input gene
+
+(10/07/19) NewtonRaphsonSqrt.cpp:
 	> Takes in a float as a command-line argument
 	> newton_raphson_iter() calculates the square root of the input value using Newton's method iteratively
 	> newton_raphson_rec() calculates the square root of the input value using Newton's method recursively
