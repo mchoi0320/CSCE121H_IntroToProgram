@@ -1,4 +1,7 @@
-all: genomics mysplit NewtonRaphsonSqrt subsetsI subsetsR pi randomize iris pointers geometry arrays vending histogram hello hello2 examples showbits area area2 circle stringtest1 stringtest2 show_words weather calendar gcd fact fib
+all: cities genomics mysplit NewtonRaphsonSqrt subsetsI subsetsR pi randomize iris pointers geometry arrays vending histogram hello hello2 examples showbits area area2 circle stringtest1 stringtest2 show_words weather calendar gcd fact fib
+
+cities: cities.cpp
+	g++ -std=c++11 -o cities cities.cpp
 
 genomics: genomics.o codons.o
 	g++ -o genomics genomics.o codons.o
@@ -40,7 +43,7 @@ arrays: arrays.cpp
 	g++ -o arrays arrays.cpp
 
 vending: vending.cpp
-	g++ --std=c++11 -o vending vending.cpp
+	g++ -std=c++11 -o vending vending.cpp
 
 histogram: histogram.cpp
 	g++ -o histogram histogram.cpp

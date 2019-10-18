@@ -1,8 +1,19 @@
 ~~~~README~~~~
 Created 9/13/19
 
+(10/14/19) cities.cpp:
+	> Takes in one or three command-line arguments:
+		>> file name [ex. texas-cities.dat]
+			>>> Outputs 
+		>> file name + C (name of desired city) + N (number of closest cities to C to display)
+			>>> Prints N closest cities to C with their distances
+	> Future considerations/improvements:
+		>> Troubleshoot validate_input_city() function
+		>> Add a check to ensure that user input for N is strictly an integer value (ex. user inputs a float -> prompt to re-enter an integer value)
+		>> Divide the code into more functions
+
 (10/07/19) genomics.cpp:
-	> Takes in three command-line arguments (.fasta file, .prot_table file, and gene name/ID)
+	> Takes in one to three command-line arguments (.fasta file, .prot_table file, and gene name/ID)
 	> Prints out:
 		>> Genome statistics from the .fasta file
 		>> Gene statistics from the .prot_table file
