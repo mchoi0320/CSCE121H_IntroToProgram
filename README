@@ -3,6 +3,8 @@ Created 9/13/19
 
 (10/27/19) poly.cpp:
 	> separate_terms() function not working properly -- troubleshoot and proceed with the remainder of the project
+	> (11/01/19) Changes:
+		>> Fixed separate_terms() function and created functions to extract coefficients and exponents from polynomial terms
 
 (10/14/19) cities.cpp:
 	> Takes in one or three command-line arguments:
