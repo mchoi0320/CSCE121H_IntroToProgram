@@ -2,57 +2,63 @@
 Created 9/13/19
 
 (10/27/19) poly.cpp:
-	> separate_terms() function not working properly -- troubleshoot and proceed with the remainder of the project
-	> (11/01/19) Changes:
-		>> Fixed separate_terms() function and created functions to extract coefficients and exponents from polynomial terms
+        > separate_terms() function not working properly -- troubleshoot and proceed with the remainder of the project
+        > (11/01/19) Changes:
+                >> Fixed separate_terms() function and created functions to extract coefficients and exponents from polynomial terms
+        > (11/07/19) Updates:
+                >> Implemented get_coefficient() and get_exponent() functions
+                >> Created:
+                        >>> add_poly() function -> requires troubleshooting
+                        >>> multiply_poly() function -> incomplete (needs method to add like terms together)
+                        >>> derive_poly() function
 
 (10/14/19) cities.cpp:
-	> Takes in one or three command-line arguments:
-		>> file name [ex. texas-cities.dat]
-			>>> Outputs 
-		>> file name + C (name of desired city) + N (number of closest cities to C to display)
-			>>> Prints N closest cities to C with their distances
-	> Future considerations/improvements:
-		>> Troubleshoot validate_input_city() function
-		>> Add a check to ensure that user input for N is strictly an integer value (ex. user inputs a float -> prompt to re-enter an integer value)
-		>> Divide the code into more functions
+        > Takes in one or three command-line arguments:
+                >> file name [ex. texas-cities.dat]
+                        >>> Outputs
+                >> file name + C (name of desired city) + N (number of closest cities to C to display)
+                        >>> Prints N closest cities to C with their distances
+        > Future considerations/improvements:
+                >> Troubleshoot validate_input_city() function
+                >> Add a check to ensure that user input for N is strictly an integer value (ex. user inputs a float -> prompt to re-enter an integer value)
+                >> Divide the code into more functions
 
 (10/07/19) genomics.cpp:
-	> Takes in one to three command-line arguments (.fasta file, .prot_table file, and gene name/ID)
-	> Prints out:
-		>> Genome statistics from the .fasta file
-		>> Gene statistics from the .prot_table file
-		>> Gene sequence and its amino acid translation from the user-input gene
+        > Takes in one to three command-line arguments (.fasta file, .prot_table file, and gene name/ID)
+        > Prints out:
+                >> Genome statistics from the .fasta file
+                >> Gene statistics from the .prot_table file
+                >> Gene sequence and its amino acid translation from the user-input gene
 
 (10/07/19) NewtonRaphsonSqrt.cpp:
-	> Takes in a float as a command-line argument
-	> newton_raphson_iter() calculates the square root of the input value using Newton's method iteratively
-	> newton_raphson_rec() calculates the square root of the input value using Newton's method recursively
-		>> Recursive function produces segmentation fault for certain numbers
+        > Takes in a float as a command-line argument
+        > newton_raphson_iter() calculates the square root of the input value using Newton's method iteratively
+        > newton_raphson_rec() calculates the square root of the input value using Newton's method recursively
+                >> Recursive function produces segmentation fault for certain numbers
 
 (10/04/19) subsets_.cpp:
-	> subsetsI.cpp & subsetsR.cpp
-	> Takes in a list of strings from the command line and outputs all possible combinations of the input strings (includes empty set)
+        > subsetsI.cpp & subsetsR.cpp
+        > Takes in a list of strings from the command line and outputs all possible combinations of the input strings (includes empty set)
 
 (09/23/19) vending.cpp
-	> Takes in a command-line argument for a file (ex. vending_contents.txt)
-	> Simulates a vending machine
-	> Needs work on:
-		>> Proper change algorithm
-	> (10/4/19) Changes:
-		>> Fixed getChange() function (does not work on certain test cases; needs troubleshooting)
-		>> Now returns change using getChange() upon "quit" if there is an outstanding balance
+        > Takes in a command-line argument for a file (ex. vending_contents.txt)
+        > Simulates a vending machine
+        > Needs work on:
+                >> Proper change algorithm
+        > (10/4/19) Changes:
+                >> Fixed getChange() function (does not work on certain test cases; needs troubleshooting)
+                >> Now returns change using getChange() upon "quit" if there is an outstanding balance
 
 (09/22/19) histogram.cpp:
-	> Takes in two command-line arguments (file name [ex: wx.dat, temps.dat] and number of desired bins for the histogram)
-	> Prints out statistics such as the number of values, mean, standard deviation, and range of values and a histogram
-	> (9/25/19) Changes:
-		>> Asks user to enter a positive value for the number of bins if the input is 0 or a negative number
-		>> Minor changes to format of histogram
+        > Takes in two command-line arguments (file name [ex: wx.dat, temps.dat] and number of desired bins for the histogram)
+        > Prints out statistics such as the number of values, mean, standard deviation, and range of values and a histogram
+        > (9/25/19) Changes:
+                >> Asks user to enter a positive value for the number of bins if the input is 0 or a negative number
+                >> Minor changes to format of histogram
 
 (09/13/19) calendar.cpp:
 
-	> Takes in two command-line arguments (numerical month and year)
-	> Prints out the calendar for the specified month and year
-	> Halloween gets properly flagged on Sundays, Mondays, and Saturdays, but not when it falls between Tuesdays and Fridays
-		>> Needs troubleshooting
+        > Takes in two command-line arguments (numerical month and year)
+        > Prints out the calendar for the specified month and year
+        > Halloween gets properly flagged on Sundays, Mondays, and Saturdays, but not when it falls between Tuesdays and Fridays
+                >> Needs troubleshooting
