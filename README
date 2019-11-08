@@ -1,6 +1,12 @@
 ~~~~README~~~~
 Created 9/13/19
 
+(11/07/19) iriscorr.cpp:
+        > Needs work on centering data
+
+(11/07/19) HourlyRotation.cpp:
+        > 
+
 (10/27/19) poly.cpp:
         > separate_terms() function not working properly -- troubleshoot and proceed with the remainder of the project
         > (11/01/19) Changes:

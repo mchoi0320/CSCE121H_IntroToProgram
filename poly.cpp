@@ -102,18 +102,19 @@ vector<TERM> add_poly(vector<TERM> poly1, vector<TERM> poly2)
 
     int i=0;
     while (!poly1.empty() && !poly2.empty()) {
-		//cout << i << endl;
+		//cout << "i = " << i << endl;
         if (poly1.front().exponent == poly2.front().exponent) {
+			//cout << "outer loop" << endl;
             float sum_coeff = poly1.front().coefficient + poly2.front().coefficient;
             if (sum_coeff != 0) {
 				//cout << "loop" << endl;
 				sum.push_back({});
 				sum[i].coefficient = sum_coeff;
-				//cout << sum[i].coefficient << endl;
+				//cout << "coeff: " << sum[i].coefficient << endl;
 				sum[i].exponent = poly1.front().exponent;
-				//cout << sum[i].exponent << endl;
+				//cout << "expo: " << sum[i].exponent << endl;
 				}
-			//cout << sum.size() << endl;
+			//cout << "poly size: " << sum.size() << endl;
             poly1.erase(poly1.begin()); poly2.erase(poly2.begin()); }
         else {
 			sum.push_back({});
@@ -128,30 +129,34 @@ vector<TERM> add_poly(vector<TERM> poly1, vector<TERM> poly2)
         i++; }
 		//cout << sum[0].coefficient << ' ' << sum[0].exponent << endl;
 
+		if (sum.empty()) {
+			sum.push_back({});
+			sum[0].coefficient = 0; }
+
     return sum;
 }
 
 vector<TERM> multiply_poly(vector<TERM> poly1, vector<TERM> poly2)
 {
-	vector<TERM> product;
-/*
-	if (poly1.size() < poly2.size()) {
-		vector<TERM> temp = poly1;
-		poly1 = poly2;
-		poly2 = temp; }
-*/	
+	vector<vector<TERM> > product;
 	float prod_coeff; int prod_exp;
-	int a = 0;
 	for (int i=0; i<poly1.size(); i++) {
+		vector<TERM> temp_prod;
 		for (int j=0; j<poly2.size(); j++) {
 			prod_coeff = poly1[i].coefficient * poly2[j].coefficient;
 			prod_exp = poly1[i].exponent + poly2[j].exponent;
-			product.push_back({});
-			product[a].coefficient = prod_coeff;
-			product[a].exponent = prod_exp;
-			a++; } }
+			temp_prod.push_back({});
+			temp_prod[j].coefficient = prod_coeff;
+			temp_prod[j].exponent = prod_exp; }
+		product.emplace_back(temp_prod); }
 
-	return product;
+	vector<vector<TERM> > temp_fin_product;
+	for (int i=0; i<product.size()-1; i++) {
+		temp_fin_product.emplace_back(add_poly(product[i], product[i+1])); }
+
+	vector<TERM> fin_product = temp_fin_product[0];
+
+	return fin_product;
 }
 
 vector<TERM> derive_poly(vector<TERM> poly)
@@ -227,6 +232,9 @@ int main()
 
 			if (inputs[0] == "deriv") {
 				vector<TERM> deriv = derive_poly(terms);
+				cout << "DERIV" << endl;
+				cout << "P     = " << inputs[1] << endl;
+				cout << "dP/dx = ";
 				print_polynomial(deriv); }
 
 			if (inputs[0] == "root") {
@@ -244,11 +252,21 @@ int main()
 
 			if (inputs[0] == "sum") {
 				vector<TERM> sum = add_poly(terms_poly1, terms_poly2);
-            	print_polynomial(sum); }
+				cout << "SUM" << endl;
+				cout << "P   = " << inputs[1] << endl;
+				cout << "Q   = " << inputs[2] << endl;
+				cout << "P+Q = ";
+				print_polynomial(sum); }
 			
 			if (inputs[0] == "prod") {
 				vector<TERM> prod = multiply_poly(terms_poly1, terms_poly2);
-				print_polynomial(prod); }
+				cout << "PROD" << endl;
+				cout << "P   = " << inputs[1] << endl;
+				cout << "Q   = " << inputs[2] << endl;
+				cout << "P*Q = ";
+				print_polynomial(prod);
+				for (int i=0; i<prod.size(); i++) {
+            		cout << prod[i].coefficient << ' ' << prod[i].exponent << endl; } }
 		
 			//for (int i=0; i<sum.size(); i++) {
             //    cout << sum[i].coefficient << ' ' << sum[i].exponent << endl; }

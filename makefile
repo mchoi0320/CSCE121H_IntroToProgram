@@ -1,4 +1,19 @@
-all: testvec poly cities genomics mysplit NewtonRaphsonSqrt subsetsI subsetsR pi randomize iris pointers geometry arrays vending histogram hello hello2 examples showbits area area2 circle stringtest1 stringtest2 show_words weather calendar gcd fact fib fibDP
+all: iriscorr HourlyRotation tuple_practice testvec poly cities genomics mysplit NewtonRaphsonSqrt subsetsI subsetsR pi randomize iris pointers geometry arrays vending histogram hello hello2 examples showbits area area2 circle stringtest1 stringtest2 show_words weather calendar gcd fact fib fibDP
+
+iriscorr: iriscorr.o matrix.o
+	g++ -o iriscorr iriscorr.o matrix.o
+
+iriscorr.o: iriscorr.cpp matrix.hpp
+	g++ -std=c++11 -c iriscorr.cpp
+
+HourlyRotation: HourlyRotation.cpp
+	g++ -o HourlyRotation HourlyRotation.cpp
+
+matrix: matrix.cpp matrix.hpp
+	g++ -c matrix.cpp
+
+tuple_practice: tuple_practice.cpp
+	g++ -o tuple_practice tuple_practice.cpp
 
 testvec: testvec.o myvec.o
 	g++ -o testvec testvec.o myvec.o
@@ -13,10 +28,10 @@ poly: poly.o poly_class.o print_vec.o
 	g++ -o poly poly.o poly_class.o print_vec.o
 
 poly.o: poly.cpp poly_class.hpp print_vec.hpp
-	g++ -c poly.cpp
+	g++ -std=c++11 -c poly.cpp
 
 poly_class: poly_class.cpp poly_class.hpp
-	g++ -c poly_class.cpp
+	g++ -std=c++11 -c poly_class.cpp
 
 print_vec: print_vec.cpp print_vec.hpp
 	g++ -c print_vec.cpp
