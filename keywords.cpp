@@ -85,7 +85,7 @@ vector<ANALYSIS> analyzeDoc(vector<string> docWords, vector<string>combinedDocWo
     return wordsAnalysis;
 }
 
-#define N 20
+#define N 50
 int main(int argc, char** argv)
 {
     if (argc > 1 && argc < 4) {
