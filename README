@@ -1,6 +1,13 @@
 ~~~~README~~~~
 Created 9/13/19
 
+(11/08/19) keywords.cpp:
+        > Takes in one or two command-line arguments:
+                >> file name of concatenated documents
+                        >>> Prints the most frequent words in the collection of documents
+                >> file (C) name of concatenated documents + file (D) name of a particular document
+                        >>> Prints words in D sorted by "relative enrichment" to the same words in C
+
 (11/07/19) iriscorr.cpp:
         > Needs work on centering data
 
@@ -21,7 +28,8 @@ Created 9/13/19
 (10/14/19) cities.cpp:
         > Takes in one or three command-line arguments:
                 >> file name [ex. texas-cities.dat]
-                        >>> Outputs
+                        >>> Prints the closest and farthest cities to each city along with their distances
+                        >>> Outputs the two closest and two farthest cities from the list
                 >> file name + C (name of desired city) + N (number of closest cities to C to display)
                         >>> Prints N closest cities to C with their distances
         > Future considerations/improvements:

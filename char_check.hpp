@@ -1,0 +1,1 @@
+bool isNotLetter(char c);
