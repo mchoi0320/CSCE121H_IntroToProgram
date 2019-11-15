@@ -9,10 +9,12 @@ Created 9/13/19
                         >>> Prints words in D sorted by "relative enrichment" to the same words in C
 
 (11/07/19) iriscorr.cpp:
-        > Needs work on centering data
+        > Takes in two command-line arguments (IRIS database file name and species name)
+        > (11/14/19) Program fully implemented and debugged
 
 (11/07/19) HourlyRotation.cpp:
-        > 
+        > Takes in one command-line argument (file name containing list of 2D coordinates)
+        > (11/14/19) Program completed
 
 (10/27/19) poly.cpp:
         > separate_terms() function not working properly -- troubleshoot and proceed with the remainder of the project

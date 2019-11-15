@@ -1,4 +1,7 @@
-all: keywords iriscorr HourlyRotation poly cities genomics NewtonRaphsonSqrt subsetsI subsetsR vending histogram calendar
+all: iters keywords iriscorr HourlyRotation poly cities genomics NewtonRaphsonSqrt subsetsI subsetsR vending histogram calendar
+
+iters: iters.cpp
+	g++ --std=c++11 -o iters iters.cpp
 
 keywords: keywords.o char_check.o
 	g++ -o keywords keywords.o char_check.o
@@ -13,10 +16,13 @@ iriscorr: iriscorr.o matrix.o
 	g++ -o iriscorr iriscorr.o matrix.o
 
 iriscorr.o: iriscorr.cpp matrix.hpp
-	g++ -c iriscorr.cpp
+	g++ -std=c++11 -c iriscorr.cpp
 
-HourlyRotation: HourlyRotation.cpp
-	g++ -o HourlyRotation HourlyRotation.cpp
+HourlyRotation: HourlyRotation.o matrix.o
+	g++ -o HourlyRotation HourlyRotation.o matrix.o
+
+HourlyRotation.o: HourlyRotation.cpp matrix.hpp
+	g++ -std=c++11 -c HourlyRotation.cpp
 
 matrix: matrix.cpp matrix.hpp
 	g++ -c matrix.cpp

@@ -3,14 +3,11 @@
 
 class Matrix {
     public:
-        // default constructor
-        Matrix();
-
         // constructor to allocate space on heap
         Matrix(int row, int col);
 
         // copy constructor
-        Matrix(Matrix &old);
+        Matrix(const Matrix &old);
 
         // destructor
         ~Matrix();
@@ -18,19 +15,30 @@ class Matrix {
         // setter and getter functions
         void setVal(int row, int col, float val);
         float getVal(int row, int col);
-        void getMatrix();
-        
+
         // operative methods
-        float calcMean(float matrix[][4], int col);
-        void centerData(float initMatrix[][4], float centeredMat[][4]);
-        float transpose();
-        void prod();
         void print();
+        float calcMean(int col);
+        void centerData();
+        //void transpose();
+        Matrix transpose();
+        Matrix normalize();
+        friend Matrix prod(Matrix A, Matrix B);
 
     private:
-        int P, Q;           // P = rows & Q = columns
-        float** vals;       // 2D array of floats
-
+        int P, Q;       // P = rows & Q = columns
+        float* vals;    // array of floats
 };
+
+class RotMat : public Matrix {
+    public:
+        // constructor for (x,y) coordinate
+        RotMat(float x, float y);
+
+        // constructor for 2x2 matrix
+        RotMat(float d);
+};
+
+Matrix prod(Matrix A, Matrix B);
 
 #endif
