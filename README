@@ -1,6 +1,12 @@
 ~~~~README~~~~
 Created 9/13/19
 
+(11/15/19) elevator.cpp:
+        > Takes in four command-line arguments in the following order: <number of iterations> <number of floors> <number of cars> <traffic file>
+        > Simulates elevator(s) using data from the traffic file
+                >> Prints information during each iteration (ex. new arrivals; load, state, and dir of each car; etc.)
+                >> Outputs a summary of all persons at the end
+
 (11/08/19) keywords.cpp:
         > Takes in one or two command-line arguments:
                 >> file name of concatenated documents
