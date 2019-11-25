@@ -1,5 +1,0 @@
-update():
-> check which floors have pressed buttons
-	>> if elevator is already at floor with pressed button, get people on
-		>>> remove people from Floor and add them to Car
-	>> else move towards closest floor with pressed button
