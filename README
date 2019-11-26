@@ -6,6 +6,7 @@ Created 9/13/19
         > Simulates elevator(s) using data from the traffic file
                 >> Prints information during each iteration (ex. new arrivals; load, state, and dir of each car; etc.)
                 >> Outputs a summary of all persons at the end
+	> The initial floor and direction of each car are randomized for each run
 
 (11/08/19) keywords.cpp:
         > Takes in one or two command-line arguments:
