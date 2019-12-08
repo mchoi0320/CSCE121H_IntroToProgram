@@ -1,7 +1,0 @@
-class Poly
-{
-	private:
-
-	public:
-
-};
